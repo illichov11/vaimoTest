@@ -55,6 +55,7 @@ class ATM
         $validPin = Validate::validatePin($pin);
         if (!$validPin) {
             echo 'Pin-код введен некорректно' . PHP_EOL;
+            $this->inputPin()
         } elseif ($validPin) {
             $this->mainMenu();
         }
